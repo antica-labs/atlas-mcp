@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "lu.atlas-legal/atlas",
+  "title": "ATLAS Legal",
+  "description": "Law firm practice management connector for ATLAS Legal (www.atlas-legal.lu): dossiers, clients, pr",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.atlas-legal.lu",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/antica-labs/atlas-mcp/main/assets/logo.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/antica-labs/atlas-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://www.atlas-legal.lu/api/mcp"
+    }
+  ]
+}
