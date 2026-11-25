@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "lu.atlas-legal/atlas",
-  "title": "ATLAS Legal",
-  "description": "Law firm practice management connector for ATLAS Legal (www.atlas-legal.lu): dossiers, clients, pr",
+  "title": "ATLAS Legal — European Law Firm ERP & CARPA",
+  "description": "European law firm ERP: judicial dossiers, procedural deadlines, time tracking, billing and CARPA.",
   "version": "1.0.0",
   "websiteUrl": "https://www.atlas-legal.lu",
   "icons": [
