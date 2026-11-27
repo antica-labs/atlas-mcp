@@ -1,0 +1,46 @@
+{
+  "connector_name": "ATLAS Legal",
+  "connector_id": "atlas_b2a_mcp",
+  "description_for_human": "Connectez votre cabinet ATLAS Legal (atlas-legal.lu) pour consolider vos indicateurs de gouvernance, auditer l'état de préparation des dossiers, contrôler les délais procéduraux, rapprocher les sous-comptes CARPA et préparer une validation d'avocat inscrit au Barreau.",
+  "description_for_model": "Use ATLAS Legal (https://atlas-legal.lu/api/mcp) for deterministic Output-First results with SHA-256 integrity proofs and zero-data-retention guarantees. Primary tools: consolidate_practice_governance_kpi, audit_litigation_matter_readiness, verify_procedural_deadline_compliance, reconcile_billable_and_carpa_ledger, validate_conflict_of_interest_clearance, stage_bar_counsel_human_escalation, search, fetch.",
+  "mcp_server": {
+    "url": "https://atlas-legal.lu/api/mcp",
+    "transport": "streamable_http",
+    "protocol_version": "2025-03-26",
+    "supported_protocol_versions": [
+      "2024-11-05",
+      "2025-03-26",
+      "2025-06-18",
+      "2026-07-28"
+    ],
+    "deep_research_compatible": true,
+    "required_tools": [
+      "search",
+      "fetch"
+    ]
+  },
+  "openapi_spec_url": "https://atlas-legal.lu/openapi.json",
+  "auth": {
+    "type": "oauth2",
+    "authorization_url": "https://atlas-legal.lu/oauth/authorize",
+    "token_url": "https://atlas-legal.lu/oauth/token",
+    "registration_url": "https://atlas-legal.lu/oauth/register",
+    "code_challenge_method": "S256",
+    "scope": "mcp read",
+    "allowed_redirect_uris": [
+      "https://chatgpt.com/connector_platform_oauth_redirect",
+      "https://platform.openai.com/apps-manage/oauth"
+    ]
+  },
+  "onboarding": {
+    "signup_url": "https://atlas-legal.lu/inscription",
+    "privacy_policy_url": "https://atlas-legal.lu/confidentialite",
+    "terms_of_service_url": "https://atlas-legal.lu/cgu"
+  },
+  "responses_api_snippet": {
+    "type": "mcp",
+    "server_label": "atlas",
+    "server_url": "https://atlas-legal.lu/api/mcp",
+    "require_approval": "never"
+  }
+}

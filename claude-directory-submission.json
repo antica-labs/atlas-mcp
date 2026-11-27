@@ -1,0 +1,41 @@
+{
+  "submission_type": "remote_mcp_connector",
+  "portal_url": "https://claude.ai/directory/manage",
+  "name": "ATLAS Legal",
+  "slug": "atlas-legal",
+  "tagline": "Law firm practice KPIs, litigation matter readiness, procedural deadlines, and CARPA reconciliation.",
+  "description": "Connectez votre cabinet ATLAS Legal (atlas-legal.lu) pour consolider vos indicateurs de gouvernance, auditer l'état de préparation des dossiers, contrôler les délais procéduraux, rapprocher les sous-comptes CARPA et préparer une validation d'avocat inscrit au Barreau.",
+  "category": "Legal & Practice Management",
+  "server_url": "https://atlas-legal.lu/api/mcp",
+  "protocol_version": "2025-03-26",
+  "transport": "streamable-http",
+  "authentication": {
+    "type": "oauth2",
+    "pkce_required": true,
+    "code_challenge_method": "S256",
+    "protected_resource_metadata_url": "https://atlas-legal.lu/.well-known/oauth-protected-resource",
+    "authorization_server_metadata_url": "https://atlas-legal.lu/.well-known/oauth-authorization-server",
+    "authorization_url": "https://atlas-legal.lu/oauth/authorize",
+    "token_url": "https://atlas-legal.lu/oauth/token",
+    "registration_url": "https://atlas-legal.lu/oauth/register",
+    "allowed_callback_urls": [
+      "https://claude.ai/api/mcp/auth_callback",
+      "https://claude.com/api/mcp/auth_callback",
+      "http://localhost/callback",
+      "claude://mcp/auth_callback"
+    ],
+    "default_scopes": [
+      "mcp",
+      "read"
+    ]
+  },
+  "links": {
+    "homepage": "https://atlas-legal.lu",
+    "signup_onboarding": "https://atlas-legal.lu/inscription",
+    "documentation": "https://atlas-legal.lu/.well-known/mcp.json",
+    "openapi": "https://atlas-legal.lu/openapi.json",
+    "privacy_policy": "https://atlas-legal.lu/confidentialite",
+    "terms_of_service": "https://atlas-legal.lu/cgu",
+    "support_email": "contact@atlas-legal.lu"
+  }
+}

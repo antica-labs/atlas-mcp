@@ -1,10 +1,10 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "lu.atlas-legal/atlas",
-  "title": "ATLAS Legal — European Law Firm ERP & CARPA",
-  "description": "European law firm ERP: judicial dossiers, procedural deadlines, time tracking, billing and CARPA.",
-  "version": "1.0.0",
-  "websiteUrl": "https://www.atlas-legal.lu",
+  "title": "ATLAS Legal — European Law Firm Governance & CARPA",
+  "description": "Law firm practice KPIs, litigation matter readiness, procedural deadlines, and CARPA reconciliation.",
+  "version": "1.2.0",
+  "websiteUrl": "https://atlas-legal.lu",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/antica-labs/atlas-mcp/main/assets/logo.svg",
@@ -21,7 +21,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://www.atlas-legal.lu/api/mcp"
+      "url": "https://atlas-legal.lu/api/mcp"
     }
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": [
+    "antica-labs"
+  ],
+  "name": "ATLAS Legal",
+  "description": "European law firm practice governance connector for ATLAS Legal (atlas-legal.lu): litigation readiness, procedural deadlines, conflict clearance, CARPA escrow reconciliation, and Bar counsel sign-off.",
+  "homepage": "https://atlas-legal.lu",
+  "remote": {
+    "transport": "streamable-http",
+    "url": "https://atlas-legal.lu/api/mcp"
+  }
+}

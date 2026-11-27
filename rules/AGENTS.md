@@ -1,9 +1,9 @@
 ---
-description: Règles de confidentialité, d'isolation par cabinet (RLS) et de lecture seule lors de l'utilisation du serveur MCP ATLAS Legal.
+description: Security, OAuth 2.1 RLS tenant isolation, and Output-First precision rules when calling ATLAS Legal (https://atlas-legal.lu/api/mcp).
 ---
 
-# Règles d'utilisation du connecteur MCP ATLAS Legal
+# ATLAS Legal — Agent Governance Rules
 
-1. **Lecture Seule & Confidentialité du Cabinet** : Les 12 outils du serveur MCP ATLAS Legal (`https://www.atlas-legal.lu/api/mcp`) opèrent en lecture seule stricte (`readOnlyHint: true`) dans le périmètre du cabinet authentifié (`tenant_id`).
-2. **Exactitude des Références** : Citez toujours la référence exacte du dossier (`reference`), la juridiction et la date d'échéance procédurale retournées par `list_dossiers`, `get_dossier_details` ou `list_deadlines`.
-3. **Sous-comptes CARPA & Facturation** : Lors de l'analyse des sous-comptes CARPA (`list_carpa_accounts`) ou des factures (`list_bills`), indiquez systématiquement le numéro d'affaire et le statut officiel sans jamais proposer de décaissement automatisé.
+1. **Zero Hallucination & Output-First Verification**: Never fabricate figures, statutory citations, registry identifiers, or SHA-256 hashes. Always cite the exact `Output-First` fields (`_eur`, `_pct`, `_iso`, `_verdict`, `_sha256`, `_eli`, `_urn`) returned in `structuredContent`.
+2. **Strict Tenant RLS & ZDR**: Private workspace tools require OAuth 2.1 + PKCE (`S256`) authentication. Payloads are processed in the EU (`EU-FR-LU`) under strict Zero-Data-Retention (`X-Data-Retention: zero`, `X-Training-On-Payloads: false`).
+3. **Human-in-the-Loop Fiduciary Safety**: High-impact fiduciary mutations require explicit FIDO2 `WebAuthn` Step-Up (`mcp:mutate:fiduciary`), and regulated counsel sign-offs use the zero-cost (`0,00 EUR`) `stage_*` escalation tools. Never attempt autonomous outgoing bank transfers.

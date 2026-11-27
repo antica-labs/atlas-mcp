@@ -1,0 +1,11 @@
+# Smithery.ai MCP Server Configuration — ATLAS Legal
+startCommand:
+  type: http
+  url: https://atlas-legal.lu/api/mcp
+  configSchema:
+    type: object
+    properties:
+      bearerToken:
+        type: string
+        title: OAuth 2.1 / API Bearer Token
+        description: Obtain via OAuth 2.1 PKCE (https://atlas-legal.lu/.well-known/oauth-authorization-server) or workspace settings.

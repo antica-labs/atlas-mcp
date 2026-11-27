@@ -1,0 +1,7 @@
+# Official OpenAI Codex CLI / Cloud Configuration (~/.codex/config.toml)
+[mcp_servers.atlas]
+url = "https://atlas-legal.lu/api/mcp"
+bearer_token_env_var = "ATLAS_MCP_TOKEN"
+startup_timeout_sec = 15
+tool_timeout_sec = 30
+enabled = true

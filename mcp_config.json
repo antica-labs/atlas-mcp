@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "atlas": {
-      "url": "https://www.atlas-legal.lu/api/mcp",
+      "url": "https://atlas-legal.lu/api/mcp",
       "oauth": {
         "clientId": "antigravity-marketplace-client"
       }
